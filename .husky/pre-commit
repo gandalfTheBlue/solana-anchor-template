@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+yarn fmt
+yarn lint:fix
+yarn lint-staged
+gitleaks protect --staged
